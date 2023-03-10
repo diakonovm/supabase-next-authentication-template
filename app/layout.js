@@ -1,4 +1,5 @@
 import 'server-only'
+import Navbar from '@/components/navbar'
 import SupabaseListener from '@/components/supabase-listener'
 import SupabaseProvider from '@/components/supabase-provider'
 import { createClient } from '@/utils/supabase-server'
@@ -26,6 +27,7 @@ export default async function RootLayout({ children }) {
       <body className="h-screen min-h-screen">
         <SupabaseProvider session={session}>
           <SupabaseListener serverAccessToken={session?.access_token} />
+          <Navbar className="flex-shrink-0" />
           {children}
         </SupabaseProvider>
       </body>
