@@ -4,11 +4,11 @@ import SupabaseProvider from '@/components/supabase-provider'
 import { createClient } from '@/utils/supabase-server'
 import './globals.css'
 
-export const revalidate = 0
-
 export const metadata = {
-  title: 'Supabase-authentication-template'
+  title: 'supabase-next-authentication-template'
 }
+
+export const revalidate = 0
 
 export default async function RootLayout({ children }) {
   const supabase = createClient()
@@ -23,7 +23,7 @@ export default async function RootLayout({ children }) {
       head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
     */}
       <head />
-      <body className="min-h-screen bg-white">
+      <body className="h-screen min-h-screen">
         <SupabaseProvider session={session}>
           <SupabaseListener serverAccessToken={session?.access_token} />
           {children}

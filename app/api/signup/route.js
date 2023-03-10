@@ -4,6 +4,8 @@ import { SignUpEmailPasswordSchema } from '@/validations/auth'
 export async function POST(req) {
   const { email, password } = await req.json()
 
+  // TODO: Set an authorization role/level
+
   try {
     await SignUpEmailPasswordSchema.validate({ email, password })
   } catch (err) {
