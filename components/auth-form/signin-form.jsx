@@ -39,7 +39,7 @@ export default function SigninForm({ setForm }) {
           onClick={() => handleSetForm(FORMS.SIGN_UP_FORM)}
           className="mb-5 text-sm underline text-zinc-500"
         >
-          Don't have an account?
+          Don&apos;t have an account?
         </button>
         <Formik
           initialValues={{ email: '', password: '' }}
