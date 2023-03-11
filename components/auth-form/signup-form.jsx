@@ -6,7 +6,7 @@ import { useState } from 'react'
 import { FORMS } from './index'
 
 async function signUpWithEmailPassword(payload) {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/signup`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_VERCEL_URL}/signup`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
